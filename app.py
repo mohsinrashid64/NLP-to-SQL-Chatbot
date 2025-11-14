@@ -133,4 +133,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     tables.change(show_table, inputs=tables, outputs=[schema_out, data_out])
     ask_btn.click(ask_database, inputs=question, outputs=[sql_out, result_out])
 
-demo.launch()
+# demo.launch()
+demo.launch(server_name="0.0.0.0", server_port=7860)
+# demo.launch(share=True) # For Internet Live Link for one week.
+
+
