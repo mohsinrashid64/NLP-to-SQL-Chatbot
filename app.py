@@ -25,7 +25,7 @@ def load_database(file):
         db = SQLDatabase(engine)
 
         # Setup LLM + SQL chain
-        llm = Ollama(model="qwen2.5:7b", base_url="http://127.0.0.1:11434")
+        llm = Ollama(model="qwen3:8b", base_url="http://127.0.0.1:11434")
         query_chain = create_sql_query_chain(llm, db)
 
         # Get tables
