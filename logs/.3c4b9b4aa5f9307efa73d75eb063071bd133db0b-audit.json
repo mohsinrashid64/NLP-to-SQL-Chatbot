@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "d:\\Work\\FastNexa\\NLP-to-SQL-Chatbot\\logs\\.3c4b9b4aa5f9307efa73d75eb063071bd133db0b-audit.json",
+    "files": [
+        {
+            "date": 1769152763051,
+            "name": "d:\\Work\\FastNexa\\NLP-to-SQL-Chatbot\\logs\\mcp-puppeteer-2026-01-23.log",
+            "hash": "c2cdba6c0b5f62852fd49ad7adb229799fe6ff85ecc0e706d06588fd28698b77"
+        },
+        {
+            "date": 1769318479385,
+            "name": "d:\\Work\\FastNexa\\NLP-to-SQL-Chatbot\\logs\\mcp-puppeteer-2026-01-25.log",
+            "hash": "c7e2c43f174aa18210fcc814fa83d16b29915436ffccfd6e6c9b4dd32914aafe"
+        },
+        {
+            "date": 1769408396445,
+            "name": "d:\\Work\\FastNexa\\NLP-to-SQL-Chatbot\\logs\\mcp-puppeteer-2026-01-26.log",
+            "hash": "f2c8552652917fccaeb48a2ac1db63494ae2b566740e034ae2686f1700515b56"
+        },
+        {
+            "date": 1769509508035,
+            "name": "d:\\Work\\FastNexa\\NLP-to-SQL-Chatbot\\logs\\mcp-puppeteer-2026-01-27.log",
+            "hash": "3978e2f745e9db178d259dfadef8519d90360e027181a5ac9ba07d3bfe593f93"
+        }
+    ],
+    "hashType": "sha256"
+}

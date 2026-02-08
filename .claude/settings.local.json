@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python -c \"\nimport mysql.connector\nconn = mysql.connector.connect\\(\n    host=''zkw-test-mysql.mysql.database.azure.com'',\n    port=3306,\n    user=''mysqladmin'',\n    password=''ZkwTest2026Pass1'',\n    database=''zkwmbdb_global_elunic''\n\\)\ncursor = conn.cursor\\(\\)\ncursor.execute\\(''SHOW TABLES''\\)\ntables = cursor.fetchall\\(\\)\nprint\\(f''Total tables: {len\\(tables\\)}''\\)\nfor t in tables[:20]:\n    print\\(f''  - {t[0]}''\\)\nif len\\(tables\\) > 20:\n    print\\(f''  ... and {len\\(tables\\)-20} more''\\)\nconn.close\\(\\)\n\")",
+      "Bash(.venvScriptspip install pymysql)",
+      "Bash(d:\\\\Work\\\\FastNexa\\\\NLP-to-SQL-Chatbot\\\\.venv\\\\Scripts\\\\pip.exe install:*)"
+    ]
+  }
+}

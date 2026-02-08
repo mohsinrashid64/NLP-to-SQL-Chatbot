@@ -1,0 +1,41 @@
+# Demo Prompts for ZKW Workshop (Jan 29)
+# Replace "722/1049 Assembly Line" with actual assembly line name if needed
+
+============================================================
+PROMPT 1 - Bar Chart (NOK by Date)
+============================================================
+Show the count of NOK parts for assembly line "722/1049 Assembly Line" on 10th, 11th, and 12th January as a bar chart
+
+============================================================
+PROMPT 2 - Line Chart (Daily Trend)
+============================================================
+Show the daily trend of NOK parts for assembly line "722/1049 Assembly Line" from 8th January to 14th January as a line chart
+
+============================================================
+PROMPT 3 - Bar Chart (OK vs NOK Comparison)
+============================================================
+Compare the count of OK parts vs NOK parts for assembly line "722/1049 Assembly Line" in January as a bar chart
+
+============================================================
+BACKUP PROMPTS (if above don't work)
+============================================================
+
+# Simple NOK count by date (no specific assembly line)
+Show the count of NOK parts (PartState=0) from _tblpartinspentry grouped by DATE(StartTStamp) as a bar chart
+
+# Total inspections trend
+Show total number of inspections from _tblpartinspentry grouped by DATE(StartTStamp) as a line chart
+
+# Top workstations by NOK
+Show top 10 TestUnitID with most NOK parts (PartState=0) from _tblpartinspentry as a bar chart
+
+============================================================
+FIND ASSEMBLY LINES WITH DATA (run this SQL first)
+============================================================
+SELECT t.TestUnitName, COUNT(*) as nok_count
+FROM _tblpartinspentry p
+JOIN tbltestunit t ON p.TestUnitID = t.TestUnitID
+WHERE p.PartState = 0
+GROUP BY t.TestUnitName
+ORDER BY nok_count DESC
+LIMIT 10;

@@ -1,0 +1,30 @@
+Show me all assembly lines in the database and limit 20
+how many process types
+list all process types
+list all image format names, do not add any limit
+
+
+
+
+1. Give me the number of NOK parts from assembly line "772 Scada Icon-Modules" on 9. January 2026. Use chart tool to create a diagram 
+  
+2. Show me the top 5 workstations with the most NOK (defective) parts in January 2026. Display as a bar chart. 
+
+3. Give me the number of NOK parts from assembly line "Workstation 1" on 12th January. Create a chart showing the results. 
+
+
+Give me the number of NOK parts from assembly line "Workstation 1" on 11th January, 12th January and 13th January. Create a chart showing the results. 
+
+
+
+----
+
+
+
+1. Give me the number of NOK parts from assembly line "772 Scada Icon-Modules" on 9. January 2026. Use chart tool to create a diagram 
+  
+
+2. Show the count of NOK parts for 12th January and create a line chart showing the trend. 
+
+3. Show the total count of OK parts vs NOK parts as a bar chart
+
