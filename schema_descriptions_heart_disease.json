@@ -1,0 +1,217 @@
+{
+  "database": "heart_disease",
+  "db_type": "sqlite",
+  "tables": {
+    "Medical_Records": {
+      "schema": [
+        {
+          "Field": "record_id",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "PRI",
+          "Default": null
+        },
+        {
+          "Field": "patient_id",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "cholesterol",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "blood_pressure",
+          "Type": "TEXT",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "diabetes",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "heart_disease",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        }
+      ],
+      "analysis": {
+        "description": "The Medical_Records table stores patient health metrics and diagnostic indicators for cardiovascular risk assessment and chronic disease management. It serves as a central repository for key biomedical data used in clinical decision-making and population health analysis.",
+        "columns": {
+          "record_id": "Unique identifier for each medical record entry",
+          "patient_id": "Reference to the associated patient in the Patients table",
+          "cholesterol": "Blood cholesterol levels measured in mg/dL",
+          "blood_pressure": "Blood pressure readings formatted as systolic/diastolic (e.g., 145/95)",
+          "diabetes": "Binary flag indicating diabetes presence (1) or absence (0)",
+          "heart_disease": "Binary flag indicating heart disease presence (1) or absence (0)"
+        },
+        "business_terms": [
+          "Cardiovascular Health",
+          "Chronic Conditions",
+          "Patient Monitoring",
+          "Risk Factors",
+          "Clinical Metrics"
+        ],
+        "related_tables": [
+          "Patients",
+          "Treatments"
+        ],
+        "example_questions": [
+          "Which patients have both diabetes and heart disease?",
+          "What is the average cholesterol level for patients with high blood pressure?",
+          "How many records show abnormal blood pressure readings?"
+        ]
+      }
+    },
+    "Patients": {
+      "schema": [
+        {
+          "Field": "patient_id",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "PRI",
+          "Default": null
+        },
+        {
+          "Field": "name",
+          "Type": "TEXT",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "age",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "gender",
+          "Type": "TEXT",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "bmi",
+          "Type": "REAL",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "smoker",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        }
+      ],
+      "analysis": {
+        "description": "The Patients table stores core demographic and health-related information for individuals under medical care, serving as a foundational dataset for tracking patient profiles and linking to their medical history and treatments.",
+        "columns": {
+          "patient_id": "A unique identifier for each patient, serving as the primary key for record management",
+          "name": "Full name of the patient, typically stored as a text string",
+          "age": "Patient's age in years, stored as an integer value",
+          "gender": "Biological sex of the patient, with possible values like Male, Female, or Other",
+          "bmi": "Body Mass Index calculated from height and weight, stored as a floating-point number",
+          "smoker": "Binary indicator for smoking status (1 for smoker, 0 for non-smoker)"
+        },
+        "business_terms": [
+          "Patient Demographics",
+          "Health Metrics",
+          "Smoking Status",
+          "Medical Records Linkage"
+        ],
+        "related_tables": [
+          "Medical_Records",
+          "Treatments"
+        ],
+        "example_questions": [
+          "What is the average BMI among male patients?",
+          "How many smokers are recorded in the patient database?",
+          "What demographic patterns exist in the patient population?"
+        ]
+      }
+    },
+    "Treatments": {
+      "schema": [
+        {
+          "Field": "treatment_id",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "PRI",
+          "Default": null
+        },
+        {
+          "Field": "patient_id",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "medication",
+          "Type": "TEXT",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "surgery",
+          "Type": "TEXT",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        },
+        {
+          "Field": "follow_up_months",
+          "Type": "INTEGER",
+          "Null": "YES",
+          "Key": "",
+          "Default": null
+        }
+      ],
+      "analysis": {
+        "description": "The Treatments table stores information about medical interventions provided to patients, including medications, surgical procedures, and follow-up durations. It serves as a central repository for tracking patient treatment plans and their associated follow-up periods.",
+        "columns": {
+          "treatment_id": "A unique identifier for each treatment record, serving as the primary key",
+          "patient_id": "A foreign key linking to the Patients table, identifying which patient received the treatment",
+          "medication": "The name of the medication prescribed, with 'None' indicating no medication was administered",
+          "surgery": "The type of surgical procedure performed, with 'None' indicating no surgery was conducted",
+          "follow_up_months": "The duration in months of the follow-up period after treatment completion"
+        },
+        "business_terms": [
+          "treatment",
+          "medication",
+          "surgery",
+          "patient_care",
+          "follow_up"
+        ],
+        "related_tables": [
+          "Patients",
+          "Medical_Records",
+          "Doctors"
+        ],
+        "example_questions": [
+          "Which patients received surgery and what was the follow-up duration?",
+          "What medications were prescribed to patients with follow-up periods over 12 months?",
+          "How many treatments involved both medication and surgical procedures?"
+        ]
+      }
+    }
+  }
+}

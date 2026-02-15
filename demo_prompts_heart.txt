@@ -1,0 +1,9 @@
+1. Show me all patients and their age
+
+2. Which patients are smokers?
+
+3. Show all patients who have heart disease along with their cholesterol levels
+
+4. List all patients with their medication and whether they had surgery
+
+5. Show the average BMI of patients with heart disease vs without heart disease
